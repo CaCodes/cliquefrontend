@@ -39,7 +39,7 @@ export const setCookie = (name, value, days) => {
   const expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + days);
  
-  document.cookie = `${name}=${value}; Secure; expires=${expirationDate.toUTCString()}; path=/`;
+  document.cookie = `${name}=${value}; Secure; HttpOnly expires=${expirationDate.toUTCString()}; path=/`;
  };
 
  export const getCookie = (name) => {
