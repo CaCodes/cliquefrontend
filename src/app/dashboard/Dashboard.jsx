@@ -27,7 +27,7 @@ export default function Dashboard() {
             </Link>
           </div>
           <div className="custom_align gap_md">
-            <Link target="_blank" to={"https://clique-second.onrender.com/"}><p className="semibold sm_hidden">My Courses</p></Link>
+            <Link target="_blank" to={"https://clique-second.onrender.com"}><p className="semibold sm_hidden">My Courses</p></Link>
             <div className="custom_align name_card">
               {/* Profile pic */}
               <img src={userPic} alt="user dp" className="circle_img md_hidden" onClick={() => setShowDropdown(!showDropdown)} />
