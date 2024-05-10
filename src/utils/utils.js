@@ -39,13 +39,13 @@ export const setCookie = (name, value, days) => {
   const expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + days);
  
-  document.cookie = `${name}=${value}; Secure; HttpOnly; SameSite=Lax; expires=${expirationDate.toUTCString()}; path=/`;
+  document.cookie = `${name}=${value}; {httpOnly: true, secure: true, sameSite: 'None', domain: 'https://clique-second.onrender.com/'}; expires=${expirationDate.toUTCString()}; path=/`;
  };
 
  export const getCookie = (name) => {
   const cookies = document.cookie
     .split("; ")
-    .find((row) => row.startsWith(`${name}=`));
+    .find((row) => row.startsWith(`${name}=`)); 
  
   return cookies ? cookies.split("=")[1] : null;
  };
